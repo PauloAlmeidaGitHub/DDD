@@ -3,9 +3,27 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.539
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - Presentation", "1 - Presentation", "{5EC31982-820E-4495-855E-513264963DC6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 - Services", "2 - Services", "{40D9CAF7-D29A-4F4B-8B9E-A2FEB2373A58}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 - Application", "3 - Application", "{75B11907-6B08-43B2-8426-3EC0496A42B2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4 - Domain", "4 - Domain", "{075AA297-232C-4284-B843-0109B3E86D8E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5 - Infrastructure", "5 - Infrastructure", "{FC5996A3-DE76-422F-8A0B-B02B0764DCD6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5.1 - Data", "5.1 - Data", "{38C99F9B-7C81-41E5-BAFA-A7C3DFB36262}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5.2 - CrossCutting", "5.2 - CrossCutting", "{3284C311-F932-4F2E-9776-40B295BBEF31}"
+EndProject
 Global
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{38C99F9B-7C81-41E5-BAFA-A7C3DFB36262} = {FC5996A3-DE76-422F-8A0B-B02B0764DCD6}
+		{3284C311-F932-4F2E-9776-40B295BBEF31} = {FC5996A3-DE76-422F-8A0B-B02B0764DCD6}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {36FA6A34-D9C3-48B8-BEBD-DDE5A38C1483}
