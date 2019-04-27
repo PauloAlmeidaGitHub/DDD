@@ -1,0 +1,93 @@
+﻿@*@{
+    ViewBag.Title = "Map";
+}*@
+<h2>@ViewBag.Title</h2>
+<h3>@ViewBag.Message</h3>
+<div class="navbar-collapse collapse">
+    <BR />
+    <ul class="alert-success">
+        <br>
+        <li>CONTROLE DE EXCEPTIONS</li>
+        <li>&nbsp;&nbsp;&nbsp;&nbsp;=> Essencial Parte II - 02:28:25 - ClienteRepository.CS LINHA 84</li>
+        <br>
+        <li>NAVEGABILIDADE</li>
+        <li>&nbsp;&nbsp;&nbsp;&nbsp;=> Pesquisar MVC 5 - Attribute Routing</li>
+        <li>&nbsp;&nbsp;&nbsp;&nbsp;=> DDD.MVC - RouteConfig.cs  => LINHA 15 - routes.MapMvcAttributeRoutes();</li>
+        <li>&nbsp;&nbsp;&nbsp;&nbsp;=> DDD.MVC - Controllers.ClientesController.cs - ClienteRepository.CS LINHA [Route("listar-clientes")]</li>
+        <br>
+        <li>PERMISSIONAMENTO</li>
+        <li>&nbsp;&nbsp;&nbsp;&nbsp;=> Essencial Parte II - 03:14:55 - ClientesController.cs</li>
+        <li>&nbsp;&nbsp;&nbsp;&nbsp;=> Essencial Parte II - 03:19:20 - Exclusão pela Role - ClientesController.CS LINHA [Authorize(Roles = "admin")]</li>
+        <br>
+        <li>CLAIMS</li>
+        <li>&nbsp;&nbsp;&nbsp;&nbsp;=> Essencial Parte II - 03:20:38 - ClientesController.cs (CLAIMS - CL,CI,CE,CD,CX) (Processos elementares)</li>
+        <li>&nbsp;&nbsp;&nbsp;&nbsp;=> Essencial Parte II - 03:31:52 - ClientesController.cs (CLAIMS - CL,CI,CE,CD,CX) (Menus e Botões) - DDD.MVC - Pasta Helpers - Classe PermissionHelper</li>
+        <li>&nbsp;&nbsp;&nbsp;&nbsp;=> Essencial Parte II - 03:36:40 - Omitir Link de CreateNew para Cliente</li>
+        <li>&nbsp;&nbsp;&nbsp;&nbsp;=> Atenção para as linhas da View Clientes/Index => &#64;using DDD.MVC.Helpers  e  &#64;Html.ActionLink("Excluir", "Delete", new { id = item.ClienteId }).IfClaimHelper("PermissoesCliente", "CX")</li>
+        <br>
+        <li>SOLID</li>
+        <li>&nbsp;&nbsp;&nbsp;&nbsp;=> Avançado Parte I - 00:27:46 - OCP - Open Close Principle - Extension Methods - public static string DebitarContaCorrente(this DebitoConta debitoConta)</li>
+        <li>&nbsp;&nbsp;&nbsp;&nbsp;=> Avançado Parte I - 00:38:35 - LSP - Liskov Substitution Principle - Classe base devem ser substituidas por sua suas classes derivadas (exemplo Retângulo x Quadrado)</li>
+        <li>&nbsp;&nbsp;&nbsp;&nbsp;=> Avançado Parte I - 00:53:41 - ISP - Interface Segregation Principle - Clientes não devem ser forçados a depender de métodos que não usam (Clientes = Classes de uma Interface) várias interfaces é melhor que uma única</li>
+        <li>&nbsp;&nbsp;&nbsp;&nbsp;=> Avançado Parte I - 00:57:28 - DIP - Dependency Inversion Principle - Módulos de alto nível não devem depender de módulos de baixo nível. Ambos devem depender de abstrações; Abstrações não devem depender de detalhes. Detalhes devem depender de abstrações - Dependa de uma abstração e não de uma implementação</li>
+        <li>&nbsp;&nbsp;&nbsp;&nbsp;=> Avançado Parte I - 01:08:45 - Containers para Injeção de Dependência - Conceituação => Simple Injector</li>
+        <li>&nbsp;&nbsp;&nbsp;&nbsp;=> Avançado Parte I - 01:23:58 - Entidade x Objeto de Valor (Agrega Valor à entidade ex: Classe CPF <campo, validação>)</li>
+        <li>&nbsp;&nbsp;&nbsp;&nbsp;=> Avançado Parte I - 01:25:00 - Domínio(Contratos, Services, Factories, Specifications, Validations)</li>
+        <br>
+        <li>IMPLEMENTAÇÃO DO SOLID</li>
+        <li>&nbsp;&nbsp;&nbsp;&nbsp;=> Avançado Parte I - 01:26:14 - Bounded Context</li>
+        <li>&nbsp;&nbsp;&nbsp;&nbsp;=> Avançado Parte I - 01:31:08 - Transferir o acesso ao Repositório para a camada de domínio, usando os Serviços de Dominio</li>
+        <br>
+        <li>IMPLEMENTAÇÃO DOS SERVICOS DE DOMINIO</li>
+        <li>&nbsp;&nbsp;&nbsp;&nbsp;=> Avançado Parte I - 01:32:45 - Implementando os Serviços de Domínio</li>
+        <li>&nbsp;&nbsp;&nbsp;&nbsp;=> Avançado Parte I - 01:40:05 - A camada Application não precisa mais instanciar para persistir no banco quem vai fazer isso é a camada de Serviço Cliente Service que está no domínio</li>
+        <li>&nbsp;&nbsp;&nbsp;&nbsp;=> Avançado Parte I - 01:41:29 - Agora a ControllerClientes precisa ser ajustada para não mais instanciar ClienteApplicationService</li>
+        <li>&nbsp;&nbsp;&nbsp;&nbsp;=> Avançado Parte I - 01:43:48 - Executar - Nenhum construtor sem parâmetros foi definido para este objeto.</li>
+        <br>
+        <li>IMPLEMENTAÇÃO DO SIMPLE INJECTOR</li>
+        <li>&nbsp;&nbsp;&nbsp;&nbsp;=> Avançado Parte I - 01:46:59 - Instalação e configuração do Simple Injector (v3.2.0) em DDD.Infrastructure.CrossCutting.IoC</li>
+        <li>&nbsp;&nbsp;&nbsp;&nbsp;=> Avançado Parte I - 01:55:40 - Inicializar o Simple Injector no MVC - Recomenda-se ler a documentação do Simple Injector</li>
+        <li>&nbsp;&nbsp;&nbsp;&nbsp;=> Avançado Parte I - 01:57:34 - Instalação Simple Injector na DDD.MVC</li>
+        <li>&nbsp;&nbsp;&nbsp;&nbsp;=> Avançado Parte I - 01:55:52 - SimpleInjector.MVC3 na DDD.MVC - Dependency Resolution</li>
+        <li>&nbsp;&nbsp;&nbsp;&nbsp;=> Avançado Parte I - 02:03:02 - Quando rodar vai dar uma tela de erro amarela de erro => Linha 23:  container.Verify();</li>
+        <li>&nbsp;&nbsp;&nbsp;&nbsp;=> Avançado Parte I - 02:03:45 - Corrigir em DDD.MVC/Controllers/AccountController.cs e retirar o construtor => public AccountController(ApplicationUserManager userManager, ApplicationSignInManager signInManager)</li>
+        <li>&nbsp;&nbsp;&nbsp;&nbsp;=> Avançado Parte I - 02:04:32 - IDEM em DDD.MVC/Controllers/ManageController.cs</li>
+        <br>
+        <li>NA EXECUÇÃO</li>
+        <li>&nbsp;&nbsp;&nbsp;&nbsp;=> Fazer um break point no construtor de ClientesController</li>
+        <li>&nbsp;&nbsp;&nbsp;&nbsp;=> // Observar que em ClienteApplicationService existe uma classe de ClienteService que reside em Domain/Services via IClienteService e usa a Infrastructure</li>
+        <li>&nbsp;&nbsp;&nbsp;&nbsp;=> // ClienteService está injetado em ClienteApplicationService</li>
+        <li>&nbsp;&nbsp;&nbsp;&nbsp;=> // O ClienteRepository está injetado no ClienteService</li>
+        <li>&nbsp;&nbsp;&nbsp;&nbsp;=> // Cliente Repository faz o restante</li>
+        <li>&nbsp;&nbsp;&nbsp;&nbsp;=> // Por isso temos as interfaces de Repository nem DDD.Domain</li>
+        <br>
+        <li>RESUMO DA DEPENDENCY INJECTION</li> => Avançado Parte I - 02:05:25 até 02:09:40
+        <li>&nbsp;&nbsp;&nbsp;&nbsp;=>  1 - Presentation            - Controller recebe a injeção de IClienteApplicationService (Injeta Application)</li>
+        <li>&nbsp;&nbsp;&nbsp;&nbsp;=>  2 - Services                - TBD</li>
+        <li>&nbsp;&nbsp;&nbsp;&nbsp;=>  3 - Application             - ClienteApplicationService recebe a injeção de IClienteService (Injeta Domain)</li>
+        <li>&nbsp;&nbsp;&nbsp;&nbsp;=>  4 - Domain                  - ClienteService recebe a injeção de IClienteRepository(Injeta Repository)</li>
+        <li>&nbsp;&nbsp;&nbsp;&nbsp;=>  5 - Infrastructure.Data     - ClienteRepository NÃO RECEBE a injeção de Dependência - ACESSA OS DADOS via CONTEXT</li>
+        <br>
+        <li>IMPLEMENTAÇÃO de UNIT OF WORK</li>
+        <li>&nbsp;&nbsp;&nbsp;&nbsp;=>  Avançado Parte I - 02:09:40 - Em ApplicationService criar UNIT OF WORK</li>
+        <li>&nbsp;&nbsp;&nbsp;&nbsp;=>  Avançado Parte I - 02:20:23 - UnitOfWork.cs => Precisa resolver as dependências que serão injetadas: (EFContext context) e a da Interface (IUnitOfWork)</li>
+        <li>&nbsp;&nbsp;&nbsp;&nbsp;=>  Avançado Parte I - 02:21:00 - Então, ajustar DDD.Infrastructure.CrossCutting.IoC.BootStrapper.cs</li>
+        <li>&nbsp;&nbsp;&nbsp;&nbsp;=>  Avançado Parte I - O EF precisa estar instalado em DDD.Infrastructure.CrossCutting.IoC como referência  (ASSISTIR)</li>
+        <li>&nbsp;&nbsp;&nbsp;&nbsp;=>  Avançado Parte I - Então, ajustar DDD.Infrastructure.CrossCutting.IoC.BootStrapper.cs</li>
+        <li>&nbsp;&nbsp;&nbsp;&nbsp;=>  Avançado Parte I - 02:27:35 - Então, recebe ClienteApplicatioService. cs em uma DI do UoW</li>
+        <li>&nbsp;&nbsp;&nbsp;&nbsp;=>  Avançado Parte I - 02:29:06 - Então, depois que injetou o UoW pode fazer o commit</li>
+        <br>
+        <li>ENRIQUECENDO O DOMÍNIO</li>
+        <li>&nbsp;&nbsp;&nbsp;&nbsp;=>  Avançado Parte I - 02:42:55 - Specification Pattern (Martin Fowler) para o Domínio</li>
+        <li>&nbsp;&nbsp;&nbsp;&nbsp;=>  Avançado Parte I - 02:53:45 - NuGet - DomainValidation - A simple implementation of Specification Pattern to Domain Validation - Eduardo Pires</li>
+        <li>&nbsp;&nbsp;&nbsp;&nbsp;=>  Avançado Parte I - 02:53:45 - (Só depende de System, e não fere o SOLID)</li>
+        <li>&nbsp;&nbsp;&nbsp;&nbsp;=>  Avançado Parte I - 03:09:10 - Em DDD.Domain.Entity.Cliente criar mais uma property public ValidationResult ValidationResult { get; set; }</li>
+        <li>&nbsp;&nbsp;&nbsp;&nbsp;=>  Avançado Parte I - 03:09:10 - Em DDD.Domain.Entity.Cliente criar um Método IsValid()</li>
+        <li>&nbsp;&nbsp;&nbsp;&nbsp;=>  Avançado Parte I - 03:12:30 - Em DDD.Domai.Services.ClienteService) valida a entidade antes de adicionar</li>
+        <br>
+        <li>TESTES</li>
+        <li>&nbsp;&nbsp;&nbsp;&nbsp;=>  Avançado Parte II - 00:01:30 - Testes no domínio</li>
+        <li>WebAPI</li>
+        <li>&nbsp;&nbsp;&nbsp;&nbsp;=>  Avançado Parte II - 00:01:30 - Expor métodos via WebAPI</li>
+    </ul>
+</div>

@@ -1,0 +1,60 @@
+﻿@using DDD.MVC.Helpers
+@model IEnumerable<DDD.Application.ViewModels.ClienteViewModel>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+@{ //As permissões são verificadas como condição para exibir o link
+    if (this.IfClaim("PermissoesCliente", "CI"))  // Se não possuir permissão CI não exibe
+    {
+        <p>
+            @Html.ActionLink("Create New", "Create")
+        </p>
+    }
+}
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Nome)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CPF)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DataNascimento)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CPF)
+            </td>
+            <td>
+                <!--@Html.DisplayFor(modelItem => item.DataNascimento.Date)-->
+                @item.DataNascimento.ToString("dd/MM/yyyy")
+            </td>
+            <td>
+                @Html.ActionLink("Editar", "Edit", new { id = item.ClienteId }) |
+                @Html.ActionLink("Detalhes", "Details", new { id = item.ClienteId }) |
+                @Html.ActionLink("Excluir", "Delete", new { id = item.ClienteId }).IfClaimHelper("PermissoesCliente", "CX")
+            </td>
+        </tr>
+    }
+
+</table>

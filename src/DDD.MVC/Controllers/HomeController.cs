@@ -26,5 +26,11 @@ namespace DDD.MVC.Controllers
 
             return View();
         }
+        public ActionResult Map()
+        {
+            ViewBag.Message = "Mapa de Estudo";
+
+            return View();
+        }
     }
 }

@@ -22,11 +22,16 @@ namespace DDD.MVC.Controllers
         {
         }
 
-        public AccountController(ApplicationUserManager userManager, ApplicationSignInManager signInManager )
-        {
-            UserManager = userManager;
-            SignInManager = signInManager;
-        }
+
+        //construtor sem uso, retirado para o SimpleInjector rodar
+
+        //public AccountController(ApplicationUserManager userManager, ApplicationSignInManager signInManager )
+        //{
+        //    UserManager = userManager;
+        //    SignInManager = signInManager;
+        //}
+
+
 
         public ApplicationSignInManager SignInManager
         {

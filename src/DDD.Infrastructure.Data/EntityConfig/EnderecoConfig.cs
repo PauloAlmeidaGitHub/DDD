@@ -1,7 +1,7 @@
 ﻿using System.Data.Entity.ModelConfiguration;
 using DDD.Domain.Entity;
 
-namespace DDD.Infra.Data.EntityConfig
+namespace DDD.Infrastructure.Data.EntityConfig
 {
     public class EnderecoConfig : EntityTypeConfiguration<Endereco>
     {

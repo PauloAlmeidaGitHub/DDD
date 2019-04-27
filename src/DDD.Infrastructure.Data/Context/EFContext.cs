@@ -3,7 +3,7 @@ using System.Data.Entity;
 using System.Data.Entity.ModelConfiguration.Conventions;
 using System.Linq;
 using DDD.Domain.Entity;
-using DDD.Infra.Data.EntityConfig;
+using DDD.Infrastructure.Data.EntityConfig;
 
 namespace DDD.Infrastructure.Data.Context
 {
@@ -41,16 +41,18 @@ namespace DDD.Infrastructure.Data.Context
             base.OnModelCreating(modelBuilder);
         }
 
-        public override int SaveChanges()
+
+        //Poderia fazer no metodo Atualizar do Repositório mas teria que fazer para cada entidade e fazer um override em cada atualização
+        public override int SaveChanges()  //Ocorre para todo SaveChanges
         {
             foreach (var entry in ChangeTracker.Entries().Where(entry => entry.Entity.GetType().GetProperty("DataCadastro") != null))
             {
-                if (entry.State == EntityState.Added)
+                if (entry.State == EntityState.Added) // No Insert
                 {
                     entry.Property("DataCadastro").CurrentValue = DateTime.Now;
                 }
 
-                if (entry.State == EntityState.Modified)
+                if (entry.State == EntityState.Modified)  // No Update
                 {
                     entry.Property("DataCadastro").IsModified = false;
                 }

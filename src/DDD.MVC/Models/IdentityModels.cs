@@ -29,5 +29,8 @@ namespace DDD.MVC.Models
         {
             return new ApplicationDbContext();
         }
+
+        //DEVE SER RETIRADO
+        //public System.Data.Entity.DbSet<DDD.Application.ViewModels.ClienteViewModel> ClienteViewModels { get; set; }
     }
 }

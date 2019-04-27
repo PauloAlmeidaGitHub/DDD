@@ -31,6 +31,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DomainValidation, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\DomainValidation.1.0.0\lib\net453\DomainValidation.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -45,7 +48,21 @@
     <Compile Include="Entity\Endereco.cs" />
     <Compile Include="Interfaces\Repository\IClienteRepository.cs" />
     <Compile Include="Interfaces\Repository\IRepository.cs" />
+    <Compile Include="Interfaces\Services\IClienteService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\ClienteService.cs" />
+    <Compile Include="Specifications\Clientes\ClienteDevePossuirCPFUnicoSpecification.cs" />
+    <Compile Include="Specifications\Clientes\ClienteDevePossuirEmailUnicoSpecification.cs" />
+    <Compile Include="Specifications\Clientes\ClienteDeveSerMaiorDeIdadeSpecification.cs" />
+    <Compile Include="Specifications\Clientes\ClienteDeveTerCPFValidoSpecification.cs" />
+    <Compile Include="Specifications\Clientes\ClienteDeveTerEmailValidoSpecification.cs" />
+    <Compile Include="Validations\Clientes\ClienteAptoParaCadastroValidation.cs" />
+    <Compile Include="Validations\Clientes\ClienteEstaConsistenteValidation.cs" />
+    <Compile Include="Validations\CpfValidation.cs" />
+    <Compile Include="Validations\EmailValidation.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using DomainValidation.Validation;
+using DDD.Domain.Validations.Clientes;
 
 namespace DDD.Domain.Entity
 {
@@ -19,5 +21,16 @@ namespace DDD.Domain.Entity
         public DateTime DataCadastro { get; set; }
         public bool Ativo { get; set; }
         public virtual ICollection<Endereco> Enderecos { get; set; }
+
+        /*
+        //Usado pra ver se a entidade está ou não
+        public ValidationResult ValidationResult { get; set; }
+
+        public bool Valido()
+        {
+           ValidationResult = new ClienteEstaConsistenteValidation().Validate(this);
+            return ValidationResult.IsValid;
+        }
+        */
     }
 }
